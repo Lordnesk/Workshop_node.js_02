@@ -1,0 +1,145 @@
+1. ¿Qué es el filesystem (fs) en Node.js y para qué se utiliza?
+
+R// En Node.js, el módulo fs (filesystem) es un módulo integrado que proporciona funcionalidades para interactuar con el sistema de archivos del sistema operativo donde se ejecuta Node.js. Este módulo permite realizar operaciones como leer archivos, escribir archivos, modificar archivos, crear directorios, eliminar archivos y directorios, entre otras acciones relacionadas con el manejo de archivos y directorios.
+
+2. ¿Qué es un middleware en Express y cuál es su propósito?
+
+R// En Express, un middleware es una función que tiene acceso al objeto de solicitud (req), al objeto de respuesta (res), y a la siguiente función de middleware en el ciclo de solicitud-respuesta de la aplicación web de Express.
+
+3. ¿Qué es un endpoint en una API RESTful y cuál es su función?
+
+R// En el contexto de una API RESTful, un endpoint es un punto final o URL específico de un servicio web que se utiliza para realizar operaciones sobre recursos. l es una URL que define una operación específica sobre un recurso o una colección de recursos. Es fundamental para la arquitectura RESTful ya que proporciona la interfaz para que los clientes interactúen con los servicios web y realicen operaciones sobre los datos disponibles en el servidor.
+
+4. ¿Qué son los verbos HTTP y cuáles son los más comunes?
+
+R//Los verbos HTTP, también conocidos como métodos HTTP, son acciones estándar que indican la intención de la solicitud HTTP realizada por el cliente hacia un servidor. Cada verbo HTTP tiene un significado específico y está diseñado para realizar una operación particular sobre un recurso identificado por una URL. Los mas usados son GET, POST, PUT, PATCH, DELETE
+
+5. ¿Qué es JSON y por qué es utilizado en las API RESTful?
+
+R// JSON (JavaScript Object Notation) es un formato ligero de intercambio de datos que se utiliza ampliamente en la comunicación entre sistemas web, incluyendo las API RESTful. Es un formato fácil de leer y escribir para humanos, además de ser fácilmente interpretado y generado por máquinas.
+
+6. En lo que respecta al envio de datos a lo largo de los verbos http responde:
+    - ¿Qué es el body de una petición?
+
+    R// El body de una petición HTTP contiene los datos que se envían desde el cliente al servidor. Es una parte fundamental de la solicitud HTTP, especialmente cuando se trata de métodos como POST, PUT o PATCH, donde se espera que el cliente envíe datos al servidor para ser procesados.
+
+    - ¿Qué es el body de una respuesta?
+
+    R// El body de una respuesta HTTP contiene los datos devueltos por el servidor en respuesta a una solicitud realizada por el cliente. Es la parte de la respuesta que transporta la información solicitada por el cliente, ya sea en forma de texto, JSON, XML, imágenes u otro tipo de datos.
+
+    - ¿Qué es el query de una petición?
+
+    R// El query de una petición HTTP se refiere a la parte de la URL que contiene datos específicos que se envían al servidor como parámetros de la solicitud. Es una forma de pasar información adicional al servidor a través de la URL, especialmente cuando se utilizan los métodos GET o DELETE en las solicitudes HTTP.
+
+    - ¿Qué es el params de una petición?
+
+    R// 
+El término params en el contexto de las aplicaciones web y las API RESTful se refiere a los parámetros que forman parte de la URL de una solicitud HTTP. Estos parámetros se utilizan para proporcionar información específica sobre el recurso solicitado en la ruta de la URL, especialmente en entornos donde se utilizan enrutadores que manejan las rutas y los parámetros dinámicos.
+
+7. En lo que respecta al verbo POST responde:
+    - ¿Qué es un verbo POST y cuál es su propósito?
+
+    R// El verbo POST en el contexto de HTTP es uno de los métodos estándar que se utilizan para enviar datos desde el cliente (como un navegador web o una aplicación) al servidor. Es uno de los principales métodos que se emplean en el diseño de APIs RESTful y tiene un propósito específico y bien definido.
+
+    - ¿Cuándo se utiliza un verbo POST?
+
+    R// El verbo POST se utiliza en el contexto de HTTP y APIs RESTful en varias situaciones específicas donde es necesario enviar datos desde el cliente al servidor para que sean procesados y almacenados.
+
+    - ¿En qué se diferencia un verbo POST de los otros verbos HTTP como GET, PUT y DELETE?
+
+    R// 
+    Diferencias entre POST, GET, PUT y DELETE:
+        1. POST (Crear):
+
+        Propósito: Se utiliza para enviar datos al servidor para crear un nuevo recurso.
+        Características:
+        No es idempotente: Realizar la misma solicitud POST varias veces puede resultar en la creación de múltiples recursos en el servidor.
+        Se utiliza para operaciones que no deben repetirse o que tienen efectos únicos (como realizar una compra, enviar un formulario de registro, etc.).
+        Los datos se envían en el cuerpo (body) de la solicitud HTTP.
+
+        2. GET (Obtener):
+
+        Propósito: Se utiliza para solicitar datos del servidor.
+        Características:
+        Es idempotente: Realizar la misma solicitud GET varias veces no debe cambiar el estado del servidor (no debe tener efectos secundarios).
+        Los datos solicitados se incluyen en la URL como parámetros de query.
+        Se utiliza para obtener recursos existentes del servidor, como leer un artículo, obtener información de un usuario, etc.
+
+        3. PUT (Actualizar):
+
+        Propósito: Se utiliza para enviar datos al servidor para actualizar un recurso existente o crearlo si no existe.
+        Características:
+        Es idempotente: Realizar la misma solicitud PUT varias veces debe tener el mismo efecto (actualización del recurso).
+        Los datos se envían en el cuerpo de la solicitud HTTP, similar a POST.
+        Se utiliza para operaciones donde se conoce la ubicación exacta del recurso que se desea actualizar.
+
+        4. DELETE (Eliminar):
+
+        Propósito: Se utiliza para eliminar un recurso identificado por la URL del servidor.
+        Características:
+        Es idempotente: Realizar la misma solicitud DELETE varias veces no debe cambiar el estado del servidor más allá de la eliminación del recurso.
+        Generalmente no tiene cuerpo de solicitud (body) y los datos relevantes (como el identificador del recurso) se incluyen en la URL.
+        Se utiliza para eliminar recursos específicos del servidor, como borrar un archivo, eliminar un usuario, etc.
+
+    - ¿Como se envian datos en un verbo POST?
+
+    R// En un verbo POST de HTTP, los datos se envían al servidor a través del cuerpo (body) de la solicitud HTTP. La forma exacta de enviar estos datos puede variar dependiendo del contexto y de cómo se esté implementando la solicitud, pero generalmente se sigue un procedimiento estándar. 
+
+8. En lo que respecta al verbo GET responde:
+    - ¿Qué es un verbo GET y cuál es su propósito?
+
+    R// El verbo GET en el contexto de HTTP es uno de los métodos estándar que se utilizan para solicitar y obtener recursos de un servidor web. Es fundamental en la arquitectura web para recuperar información específica de un recurso identificado por una URL. El propósito principal del verbo GET es solicitar datos del servidor utilizando parámetros de query incluidos en la URL.
+
+    - ¿Cuándo se utiliza un verbo GET?
+
+    R//  GET es ampliamente utilizado para solicitar recursos o datos del servidor de manera segura y eficiente, ideal para operaciones de lectura y consulta en aplicaciones web, APIs RESTful y navegación en la web.
+
+    - ¿En qué se diferencia un verbo GET de los otros verbos HTTP como POST, PUT y DELETE?
+
+    R// Los verbos HTTP como GET, POST, PUT y DELETE son métodos estándar utilizados para interactuar con recursos en un servidor web a través del protocolo HTTP. Cada uno tiene un propósito específico y diferencias fundamentales en cómo manejan las solicitudes y las operaciones sobre los recursos.
+
+9. En lo que respecta al verbo PUT responde:
+    - ¿Qué es un verbo PUT y cuál es su propósito?
+
+    R// El verbo PUT en el contexto de HTTP es uno de los métodos estándar utilizados para enviar datos al servidor con el fin de crear o actualizar un recurso específico identificado por una URL.  El propósito principal del verbo PUT es permitir la creación de un nuevo recurso o la actualización de un recurso existente en el servidor.
+
+    - ¿Cuándo se utiliza un verbo PUT?
+
+    R// El verbo PUT se utiliza en situaciones específicas donde se necesita crear o actualizar un recurso identificado por una URL específica en el servidor.
+
+    - ¿En qué se diferencia un verbo PUT de los otros verbos HTTP como POST, GET y DELETE?
+
+    R// En resumen, las diferencias entre PUT, POST, GET y DELETE se centran en sus propósitos específicos, la idempotencia de las operaciones que realizan, cómo manejan los datos en la solicitud y su uso recomendado en diferentes contextos de aplicaciones web, APIs RESTful y servicios basados en HTTP. Es crucial seleccionar el verbo HTTP adecuado según el tipo de operación que se desea realizar y seguir las mejores prácticas de diseño y seguridad para una interacción efectiva y segura con los recursos del servidor.
+
+10. En lo que respecta al verbo DELETE responde:
+    - ¿Qué es un verbo DELETE y cuál es su propósito?
+
+    R// El verbo DELETE en HTTP es uno de los métodos estándar utilizados para solicitar la eliminación de un recurso específico identificado por una URL en un servidor web. El propósito principal del verbo DELETE es permitir a los clientes solicitar la eliminación de un recurso específico en el servidor. 
+
+    - ¿Cuándo se utiliza un verbo DELETE?
+
+    R// El verbo HTTP DELETE se utiliza en situaciones específicas donde se necesita eliminar un recurso específico identificado por una URL en el servidor
+
+    - ¿En qué se diferencia un verbo DELETE de los otros verbos HTTP como POST, GET y PUT?
+
+    R// En resumen, las diferencias entre DELETE, POST, GET y PUT se centran en sus propósitos específicos, la idempotencia de las operaciones que realizan, cómo manejan los datos en la solicitud y su uso recomendado en diferentes contextos de aplicaciones web, APIs RESTful y servicios basados en HTTP. Es fundamental seleccionar el verbo HTTP adecuado según el tipo de operación que se desea realizar y seguir las mejores prácticas de diseño y seguridad para una interacción efectiva y segura con los recursos del servidor.
+
+11. ¿Qué es un status code y cuáles son los más comunes?
+
+R// Un status code (código de estado) es un número de tres dígitos que se devuelve en una respuesta HTTP para proporcionar información sobre el estado de la solicitud realizada por el cliente al servidor. Estos códigos son parte integral del protocolo HTTP y se utilizan para comunicar el resultado de la solicitud al cliente y a otros sistemas que interactúan con la API o el servicio web. Los mas comunes son 100 Continue, 200 OK, 301 Moved Permanently, 403 Forbidden, 502 Bad Gateway.
+
+12. ¿Cuales son los status code mas comunes para el verbo POST?
+
+R// Algunos códigos de estado comunes que podrían ser relevantes cuando se utiliza el verbo POST son: 200 OK, 201 Created, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 409 Conflict.
+
+13. ¿Cuales son los status code mas comunes para el verbo GET?
+
+R//  Estos códigos indican el estado de la respuesta del servidor después de que se realiza una solicitud GET: 200 OK, 301 Moved Permanently, 302 Found (Moved Temporarily), 304 Not Modified, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found.
+
+14. ¿Cuales son los status code mas comunes para el verbo PUT?
+
+R//  Aquí están algunos de los códigos de estado más relevantes: 200 OK, 201 Created, 204 No Content, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 409 Conflict. 
+
+15. ¿Cuales son los status code mas comunes para el verbo DELETE?
+
+R// Estos códigos de estado indican el resultado de la solicitud DELETE realizada por el cliente al servidor: 200 OK, 204 No Content, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 405 Method Not Allowed.
